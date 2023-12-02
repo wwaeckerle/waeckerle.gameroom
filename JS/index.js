@@ -62,7 +62,7 @@ $(document).ready(function() {
 
     // Update the message
     function updateMessage(message) {
-        $('#message').text(message);
+        $('#message').alert(message);
     }
 
     // Check for a win or draw
