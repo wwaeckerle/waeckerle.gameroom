@@ -23,14 +23,14 @@ $(document).ready(function() {
             const [a, b, c] = pattern;
             if (board[a] && board[a] === board[b] && board[a] === board[c]) {
                 gameOver = true;
-                updateMessage(`${currentPlayer} wins!`);
+                updateMessage(`${currentPlayer} good job!`);
                 return;
             }
         }
 
         if (!board.includes('') && !gameOver) {
             gameOver = true;
-            updateMessage('It\'s a draw!');
+            updateMessage('Chicken Scratch!');
         }
     }
 
