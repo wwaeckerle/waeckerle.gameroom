@@ -55,14 +55,14 @@ $(document).ready(function() {
 
 ///Tic Tac Toe Game
 
-$(document).ready(function() {
+(document).ready(function() {
     let currentPlayer = 'X';
     let board = ['', '', '', '', '', '', '', '', ''];
     let gameOver = false;
 
     // Update the message
     function updateMessage(message) {
-        $('#message').alert(message);
+        ('#message').text(message);
     }
 
     // Check for a win or draw
@@ -77,7 +77,7 @@ $(document).ready(function() {
             const [a, b, c] = pattern;
             if (board[a] && board[a] === board[b] && board[a] === board[c]) {
                 gameOver = true;
-                updateMessage(`${currentPlayer} Winner Winner Chicken Dinner!`);
+                updateMessage(`{currentPlayer} Winner Winner Chicken Dinner!`);
                 return;
             }
         }
@@ -89,12 +89,12 @@ $(document).ready(function() {
     }
 
     // Handle cell click
-    $('.cell').on('click', function() {
-        const index = $(this).data('index');
+    ('.cell').on('click', function() {
+        const index = (this).data('index');
 
         if (board[index] === '' && !gameOver) {
             board[index] = currentPlayer;
-            $(this).text(currentPlayer);
+            (this).text(currentPlayer);
 
             checkResult();
 
@@ -109,11 +109,11 @@ $(document).ready(function() {
         currentPlayer = 'X';
         gameOver = false;
         updateMessage('');
-        $('.cell').text('');
+        ('.cell').text('');
     }
 
     // Reset the game when clicking the board
-    $('.board').on('click', function() {
+    ('.board').on('click', function() {
         if (gameOver) {
             resetGame();
         }
