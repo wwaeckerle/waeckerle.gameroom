@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+#feedback {
+    font-size: 18px;
+    margin-top: 20px;
+    display: none; /* Hide initially */
+}
+
+#userChoice, #computerChoice, #result {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+#choices img {
+    width: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.tic    {
+    display: inline-block;
+
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 4px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
