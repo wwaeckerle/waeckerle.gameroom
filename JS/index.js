@@ -53,16 +53,17 @@ $(document).ready(function() {
 });
 
 
+
 ///Tic Tac Toe Game
 
-(document).ready(function() {
+$(document).ready(function() {
     let currentPlayer = 'X';
     let board = ['', '', '', '', '', '', '', '', ''];
     let gameOver = false;
 
     // Update the message
     function updateMessage(message) {
-        ('#message').text(message);
+        $('#message').text(message);
     }
 
     // Check for a win or draw
@@ -70,31 +71,31 @@ $(document).ready(function() {
         const winPatterns = [
             [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
             [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
-            [0, 4, 8], [2, 4, 6]// Diagonals
+            [0, 4, 8], [2, 4, 6]             // Diagonals
         ];
 
         for (const pattern of winPatterns) {
             const [a, b, c] = pattern;
             if (board[a] && board[a] === board[b] && board[a] === board[c]) {
                 gameOver = true;
-                updateMessage(`{currentPlayer} Winner Winner Chicken Dinner!`);
+                updateMessage(`${currentPlayer} wins!`);
                 return;
             }
         }
 
         if (!board.includes('') && !gameOver) {
             gameOver = true;
-            updateMessage('Chicken Scratch!');
+            updateMessage('Chicken Scratch, Try again!');
         }
     }
 
     // Handle cell click
-    ('.cell').on('click', function() {
-        const index = (this).data('index');
+    $('.cell').on('click', function() {
+        const index = $(this).data('index');
 
         if (board[index] === '' && !gameOver) {
             board[index] = currentPlayer;
-            (this).text(currentPlayer);
+            $(this).text(currentPlayer);
 
             checkResult();
 
@@ -109,11 +110,11 @@ $(document).ready(function() {
         currentPlayer = 'X';
         gameOver = false;
         updateMessage('');
-        ('.cell').text('');
+        $('.cell').text('');
     }
 
     // Reset the game when clicking the board
-    ('.board').on('click', function() {
+    $('.board').on('click', function() {
         if (gameOver) {
             resetGame();
         }
