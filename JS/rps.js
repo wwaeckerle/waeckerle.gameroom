@@ -12,7 +12,7 @@ $(document).ready(function() {
 
         // Determine the winner
         if (userChoice === computerChoice) {
-            $('#result').text('It\'s a tie!');
+            $('#result').text('Chicken Scratch');
         } else if (
             (userChoice === 'rock' && computerChoice === 'scissors') ||
             (userChoice === 'paper' && computerChoice === 'rock') ||
@@ -20,7 +20,7 @@ $(document).ready(function() {
         ) {
             $('#result').text('You win!');
         } else {
-            $('#result').text('Computer wins!');
+            $('#result').text('HEHE YOU LOSE wins!');
         }
     });
 });
