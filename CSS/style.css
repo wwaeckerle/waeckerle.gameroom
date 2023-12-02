@@ -16,10 +16,11 @@ section.rps    {
     padding: 50px;
 }
 
-section.tic    {
+section.tic    
+    display: inline-block;
     color: #000000;
     background-color: #A6A6A6;
-    padding: 50px;
+    padding: 50px;   
 }
 
 #feedback {
@@ -40,21 +41,19 @@ section.tic    {
     cursor: pointer;
 }
 
-.tic    {
-    display: inline-block;
 
-}
 .board {
     display: grid;
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(3, 200px);
     gap: 4px;
     margin-top: 20px;
+    background-color: #fff;
 }
 
 .cell {
-    width: 300px;
-    height: 300px;
-    font-size: 60px;
+    width: 200px;
+    height: 200px;
+    font-size: 40px;
     cursor: pointer;
     border: 5px solid #000;
     display: flex;
