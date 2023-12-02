@@ -23,9 +23,8 @@ $(document).ready(function() {
             const [a, b, c] = pattern;
             if (board[a] && board[a] === board[b] && board[a] === board[c]) {
                 gameOver = true;
-                updateMessage(`${currentPlayer} good job!`);
-                return;
-            }
+                updateMessage('${currentPlayer} good job!');
+                return;            }
         }
 
         if (!board.includes('') && !gameOver) {
