@@ -5,13 +5,13 @@ body {
 }
 
 #feedback {
-    font-size: 18px;
+    font-size: 24px;
     margin-top: 20px;
     display: none; /* Hide initially */
 }
 
 #userChoice, #computerChoice, #result {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
